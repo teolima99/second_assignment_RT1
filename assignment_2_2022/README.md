@@ -1,7 +1,22 @@
 Research Track I - Assignment 2
 ================================
 
-This project involves developing a new package based on the assignment_2_2022 package, which utilizes the bug0 algorithm to move a mobile robot in a 3D space. The robot is required to reach target coordinates while avoiding obstacles in a virtual environment simulated using Gazebo, the standard virtual simulator of ROS.
+The goal of this project is to implement the bug0 algorithm to enable a mobile robot to navigate a 3D space. The robot's objective is to reach specified target coordinates while effectively avoiding obstacles within a virtual environment simulated using Gazebo, the standard virtual simulator of ROS.
+
+The project requires the creation of three nodes within the new package, each serving a distinct purpose. Here is an overview of their functionalities:
+
+* Action Client Node:
+  This node acts as an action client, allowing users to set target positions (x, y) for the robot or cancel the current target. Additionally, it publishes the robot's position and velocity as a       custom message (x, y, vel_x, vel_z) by utilizing the values published on the /odom topic. If necessary, you have the flexibility to develop two separate nodes: one for the user interface and       another for publishing the custom message.
+  
+* Service Node:
+  This node implements a service that, upon invocation, prints the number of goals reached and the number of goals cancelled. It serves as a convenient way to obtain this information.
+  
+* Position and Velocity Subscriber Node:
+  This node subscribes to the robot's position and velocity using the custom message. It calculates and prints the distance between the robot and the target position, as well as the robot's average   speed. You can adjust the publishing frequency of this information using a parameter.
+  
+In addition to the nodes, the package also includes a launch file to simplify the setup of the entire simulation. This launch file initializes all the required nodes and allows you to configure the publishing frequency for the information published by node (c).
+
+
 
 ![default_gzclient_camera(1)-2023-01-27T15_23_29 351549](https://user-images.githubusercontent.com/117213899/215110545-c90c0ec1-ce38-4ce9-86e4-545e46050bc1.jpg)
 
@@ -17,7 +32,7 @@ $ sudo apt-get install python3-scipy
 ```
 Go inside the src folder of your ROS workspace and clone the repository folder:
 ```bash
-$ git clone https://github.com/S5630055/ResearchTrack1---Assignment_2
+$ git clone https://github.com/teolima99/second_assignment_RT1.git
 ```
 Then, from the root directory of your ROS workspace, run the command:
 ```bash
