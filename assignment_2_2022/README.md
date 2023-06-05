@@ -52,7 +52,8 @@ Inside `~/<your ros workspace folder>/src/assignment_2_2022/scripts/` there are 
 
 Flowchart (`input.py`)
 ----------------------
-![flowchart](https://user-images.githubusercontent.com/117213899/215106562-20902234-1fe8-4b8e-b1c5-32a7173657ff.png)
+![flowchart](https://github.com/teolima99/second_assignment_RT1/blob/471fce5c1253d4e519c3ff461f54285d43b85331/assignment_2_2022/flowchart.png)
+
 
 Possible improvements
 ----------------------
