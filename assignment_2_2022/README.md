@@ -1,7 +1,7 @@
 Research Track I - Assignment 2
 ================================
 
-This project shows up a mobile robot moving in a 3D space, which has to reach a requested target coordinates avoiding obstacles. This happens in a virtual environment, managed by the standard virtual simulator of ROS, called Gazebo.
+This project involves developing a new package based on the assignment_2_2022 package, which utilizes the bug0 algorithm to move a mobile robot in a 3D space. The robot is required to reach target coordinates while avoiding obstacles in a virtual environment simulated using Gazebo, the standard virtual simulator of ROS.
 
 ![default_gzclient_camera(1)-2023-01-27T15_23_29 351549](https://user-images.githubusercontent.com/117213899/215110545-c90c0ec1-ce38-4ce9-86e4-545e46050bc1.jpg)
 
@@ -43,9 +43,9 @@ Nodes
 ----------------------
 Inside `~/<your ros workspace folder>/src/assignment_2_2022/scripts/` there are 6 python files:
 
-1. `bug_as.py`: action server node receiving the requested position from the client and calling the necessary services to bring the robot to the required position;
-2. `input.py`: action client node responsible for asking the user to enter the coordinates X and Y of the final destination that the robot has to reach, or to delete them. Then, it publishes the robot position and speed as a custom message on the /_position_velocity_ topic, based on the values of the /_odom_ topic.
-3. `printer.py`: node printing on the terminal the distance of the robot from the target position and its average speed. These parameters are taken from the _/position_velocity_ topic as a custom message.
+1. `bug_as.py`: The action server node receives the requested position from the client and invokes the necessary services to navigate the robot to the specified location.;
+2. `input.py`: The action client node is responsible for prompting the user to input the X and Y coordinates of the desired final destination for the robot or delete them. Subsequently, it publishes the robot's position and speed as a custom message on the "/position_velocity" topic, using the values obtained from the "/odom" topic.
+3. `printer.py`: The node prints the distance between the robot and the target position, as well as its average speed, on the terminal. These parameters are extracted from the "/position_velocity" topic as a custom message.
 4. `go_to_point_service.py`: implementation of a service node. When called, it moves the robot to the requested position.
 5. `wall_follow_service.py`: implementation of a service node. When called, it allows the robot to move around an obstacle (in our case a wall).
 6. `service.py`: it is a service node. When called, it prints the number of successful reached targets and the number of cancelled targets.
