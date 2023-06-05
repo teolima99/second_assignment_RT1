@@ -73,5 +73,7 @@ Flowchart (`input.py`)
 Possible improvements
 ----------------------
 Here are some ideas for future improvements:
-- By indicating the size of the arena, it would be possible to set a range of possible target coordinates;
-- A graphic indicator could be added at the point corresponding to the entered coordinates to be reached.
+- Implementation of Additional Navigation Algorithms: In addition to the bug0 algorithm currently used, consider implementing other navigation algorithms such as bug1, bug2, potential field, RRT (Rapidly-exploring Random Tree), A* (A-star), or D* (D-star). This would expand the robot's navigation options and allow for evaluation and comparison of the performance of different algorithms.
+- Sensor Integration: Explore adding sensors to the robot, such as proximity sensors, cameras, or Lidar sensors, to improve perception of the surrounding environment. These sensors can be used to more accurately detect obstacles and enable safer and more robust navigation.
+- Path Planning Algorithm Implementation: Alongside the bug0 algorithm, develop a path planning algorithm to enable the robot to calculate an optimal path to reach the target while avoiding obstacles. For example, implement the A* or D* algorithm to compute an efficient and safe path.
+- Performance Optimization: Evaluate and optimize the overall system's performance. This could involve optimizing the computational efficiency of implemented algorithms, efficiently managing system resources, or identifying and resolving any latency or delay issues.
